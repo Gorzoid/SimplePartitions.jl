@@ -1,4 +1,4 @@
-import Base: show, sum, conj, ctranspose, isequal, (+)
+import Base: show, sum, conj, adjoint, isequal, (+)
 
 export IntegerPartition, Ferrers
 
@@ -80,7 +80,7 @@ function conj(P::IntegerPartition)::IntegerPartition
     return IntegerPartition(new_parts)
 end
 
-ctranspose(P::IntegerPartition) = conj(P)
+adjoint(P::IntegerPartition) = conj(P)
 
 
 """
